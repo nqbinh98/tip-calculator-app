@@ -1,0 +1,259 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ## Colors */
+:root {
+    /* ### Primary */
+    --green-400: hsl(172, 67%, 45%);
+    /* ### Neutral */
+    --green-900: hsl(183, 100%, 15%);
+    --grey-500: hsl(186, 14%, 43%);
+    --grey-400: hsl(184, 14%, 56%);
+    --grey-200: hsl(185, 41%, 84%);
+    --grey-50: hsl(189, 47%, 97%);
+    --white-color: hsl(0, 100%, 100%);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+body {
+    font-family: "Space Mono", monospace !important;
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    font-weight: 400;
+    background-color: var(--grey-200);
+    min-height: 100vh;
+    width: 100%;
+}
+
+.title {
+    text-align: center;
+    padding: 60px 0;
+}
+
+.content {
+    font-size: 24px;
+    background-color: var(--white-color);
+    border-radius: 24px;
+    padding: 24px;
+    margin: auto;
+}
+
+.input-wrapper {
+    background-color: var(--grey-50);
+    position: relative;
+    padding: 8px;
+    margin-bottom: 24px;
+    border-radius: 8px;
+}
+
+.input-wrapper-bill:focus-within,
+.input-wrapper-people:focus-within,
+.percent-btn:focus-within,
+.custom-btn:focus-within {
+    box-shadow: 0 0 0 2px var(--green-400);
+}
+
+.input-icon {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    left: 16px;
+    height: 20px;
+}
+
+.input-number {
+    text-align: right;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: var(--green-900);
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 8px;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: "Space Mono", monospace;
+}
+
+.input-wrapper-people.error {
+    box-shadow: 0 0 0 2px red;
+}
+
+button { 
+    font-family: "Space Mono", monospace;
+    font-size: 24px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    padding: 8px 0;
+    cursor: pointer;
+}
+
+.container-btn button {
+    font-weight: 600;
+}
+
+.active {
+    background-color: var(--green-400) !important;
+    color: var(--green-900) !important;
+}
+
+.percent-btn:hover {
+    opacity: .8;
+}
+
+.percent-btn {
+    background-color: var(--green-900);
+    color: var(--white-color);
+    min-width: 100px;
+    cursor: pointer;
+}
+
+.custom-btn {
+    min-width: 100px;
+    color: var(--grey-900);
+    background-color: var(--grey-50);
+    border: none;
+    outline: none;
+    font-family: "Space Mono", monospace;
+    font-weight: 600;
+    font-size: 24px;
+    text-align: right;
+    padding-right: 10%;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.container-btn {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.result-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.result {
+    background-color: var(--green-900);
+    border-radius: 20px;
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.wrapper-msg {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.hide {
+    display: none;
+}
+
+.error-msg {
+    font-size: 1rem;
+    color: red
+}
+
+.result-item-number {
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--green-400);
+
+}
+.tag {
+    font-size: 1rem;
+}
+
+.tag span {
+    font-weight: 600;
+}
+
+.tag p {
+    font-size: 14px;
+    color: var(--grey-400);
+}
+
+.reset-btn:hover {
+    opacity: .8;
+}
+
+.reset-btn:disabled {
+    background-color: var(--green-400);
+    opacity: .4;
+}
+
+.reset-btn {
+    background-color: var(--green-400);
+    color: var(--green-900);
+    gap: 32px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+footer {
+    margin-top: 24px;
+}
+
+@media (min-width: 1024px) {
+    .container {
+        padding: 4vh 0;
+    }
+
+    .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        padding: 32px;
+        width: 64%;
+    }
+
+    .container-btn {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .result {
+        padding: 32px;
+        justify-content: space-between;
+    }
+    
+    .result-item-number {
+        font-size: 3rem;
+    }
+
+    .percent-btn, .custom-btn {
+        font-size: 1.5rem;
+    }
+}
+
