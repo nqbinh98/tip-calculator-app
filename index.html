@@ -20,6 +20,7 @@
     <div class="container">
       <h1 class="title">
         <img src="./images/logo.svg" alt="">
+        <span class="sr-only">Tip Calculator</span>
       </h1>
       <div class="content">
         <div class="content-calculate">
@@ -30,11 +31,11 @@
           </div>
           <span class="tag">Select Tip %</span>
           <div class="container-btn">
-            <button data-percent="5" class="percent-btn">5%</button>
-            <button data-percent="10" class="percent-btn">10%</button>
-            <button data-percent="15" class="percent-btn">15%</button>
-            <button data-percent="25" class="percent-btn">25%</button>
-            <button data-percent="50" class="percent-btn">50%</button>
+            <button type="button" data-percent="5" class="percent-btn">5%</button>
+            <button type="button" data-percent="10" class="percent-btn">10%</button>
+            <button type="button" data-percent="15" class="percent-btn">15%</button>
+            <button type="button" data-percent="25" class="percent-btn">25%</button>
+            <button type="button" data-percent="50" class="percent-btn">50%</button>
             <input type="number" class="custom-btn" placeholder="Custom">
           </div>
           <div class="wrapper-msg">
@@ -63,7 +64,7 @@
               <div class="result-item-number result-total">$0.00</div>
             </div>
           </div>
-          <button disabled class="reset-btn">Reset</button>        
+          <button type="reset" disabled class="reset-btn">Reset</button>        
         </div>
       </div>
     </div>

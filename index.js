@@ -1,7 +1,6 @@
 const billInput = document.querySelector('.bill-number');
 const peopleInput = document.querySelector('.people-number');
 const wrapperPeopleInput = document.querySelector('.input-wrapper-people');
-const selectTipBtn = document.querySelector('.container-btn');
 const allBtnPercent = document.querySelectorAll('.percent-btn');
 const customBtn = document.querySelector('.custom-btn');
 const resultTip = document.querySelector('.result-tip');
@@ -34,10 +33,10 @@ container.addEventListener('click', function (e) {
 })
 
 peopleInput.addEventListener('blur', function (e) {
-    let peopleAccountTemp = Math.floor(Number(e.target.value));
-    if (peopleAccountTemp == Number(e.target.value)) {
+    const peopleAccountTemp = Math.floor(Number(e.target.value));
+    if (peopleAccountTemp === Number(e.target.value)) {
         return; 
-    } else if (e.target.value == '') {
+    } else if (e.target.value === '') {
         e.target.value = 0;
     } else {
         peopleAccount = peopleAccountTemp;
