@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+.attribution { font-size: 0.6875rem; text-align: center; }
+.attribution a { color: var(--blue-color); }
+
+
 /* ## Colors */
 :root {
     /* ### Primary */
@@ -15,14 +19,15 @@
     --grey-200: hsl(185, 41%, 84%);
     --grey-50: hsl(189, 47%, 97%);
     --white-color: hsl(0, 100%, 100%);
+    --blue-color: hsl(228, 45%, 44%);
 }
 
 .sr-only {
     position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0px;
-    margin: -1px;
+    width: 0.0625rem;
+    height: 0.0625rem;
+    padding: 0;
+    margin: -0.0625rem;
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
@@ -71,7 +76,7 @@ main {
     background-color: var(--grey-50);
     position: relative;
     padding: 8px;
-    margin-bottom: 24px;
+    margin-block-end: 24px;
     border-radius: 8px;
 }
 
@@ -122,6 +127,13 @@ button {
     font-weight: 600;
 }
 
+.percent-btn {
+    background-color: var(--green-900);
+    color: var(--white-color);
+    min-width: 100px;
+    cursor: pointer;
+}
+
 .percent-btn.active {
     background-color: var(--green-400);
     color: var(--green-900);
@@ -129,13 +141,6 @@ button {
 
 .percent-btn:hover {
     opacity: .8;
-}
-
-.percent-btn {
-    background-color: var(--green-900);
-    color: var(--white-color);
-    min-width: 100px;
-    cursor: pointer;
 }
 
 .custom-btn {
