@@ -4,8 +4,13 @@
     padding: 0;
 }
 
-.attribution { font-size: 0.6875rem; text-align: center; }
-.attribution a { color: var(--blue-color); }
+.attribution { 
+    font-size: clamp(0.6rem, 0.7rem, 0.8rem); 
+    text-align: center; 
+}
+.attribution a { 
+    color: var(--blue-color); 
+}
 
 
 /* ## Colors */
@@ -61,14 +66,14 @@ main {
 
 .title {
     text-align: center;
-    padding: clamp(40px, 3rem, 60px);
+    padding: clamp(2.75rem, 3rem, 3.75rem);
 }
 
 .content {
-    font-size: 24px;
+    font-size: 1.5rem;
     background-color: var(--white-color);
-    border-radius: 24px;
-    padding: 24px;
+    border-radius: 1.5rem;
+    padding: 1.5rem;
     margin: auto;
 }
 
@@ -102,9 +107,9 @@ main {
     background-color: transparent;
     color: var(--green-900);
     width: 100%;
-    padding-left: 10px;
-    padding-right: 8px;
-    font-size: 24px;
+    padding-inline-start: 10px;
+    padding-inline-end: 8px;
+    font-size: 1.5rem;
     font-weight: 600;
     font-family: "Space Mono", monospace;
 }
@@ -113,13 +118,20 @@ main {
     box-shadow: 0 0 0 2px red;
 }
 
+.container-btn {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
 button { 
     font-family: "Space Mono", monospace;
-    font-size: 24px;
+    font-size: 1.5rem;
     border: none;
     outline: none;
     border-radius: 8px;
-    padding: 8px 0;
+    padding: 0.5rem 0;
     cursor: pointer;
 }
 
@@ -156,13 +168,6 @@ button {
     padding-inline-end: 10%;
     cursor: pointer;
     border-radius: 8px;
-}
-
-.container-btn {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-    margin-bottom: 24px;
 }
 
 .result-content {
@@ -209,6 +214,7 @@ button {
     color: var(--green-400);
 
 }
+
 .tag {
     font-size: 1rem;
 }
